@@ -888,10 +888,9 @@ function createSendGauge() {
 
   .picture-cs {
     display: grid;
-    grid-template-columns: 1fr 500px;
+    grid-template-columns: 1fr;
     gap: 20px;
-    @media (max-width: 1620px) {
-      grid-template-columns: 1fr;
+    @media (max-width: 1024px) {
       gap: 15px;
     }
 
