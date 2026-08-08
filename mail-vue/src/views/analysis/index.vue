@@ -198,7 +198,7 @@ let emailColumn = null
 let sendGauge = null
 let first = true
 let boxKey = ref(0)
-let senderPieLeft = window.innerWidth < 500 ? `${window.innerWidth - 110}` : '72%'
+let senderPieLeft = '50%'
 let analysisDark = uiStore.dark
 
 onMounted(() => {
@@ -288,7 +288,7 @@ function initPicture() {
 }
 
 function setStyle() {
-  senderPieLeft = window.innerWidth < 500 ? `${window.innerWidth - 110}` : '72%'
+  senderPieLeft = '50%'
   emailColumnData.barWidth = window.innerWidth > 767 ? '40%' : '60%'
 }
 
