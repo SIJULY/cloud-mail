@@ -14,7 +14,7 @@
               </div>
             </div>
             <div class="right">
-              <div class="count-icon">
+              <div class="count-icon" @click="route.name !== 'all-email' && $router.push({name: 'all-email'})" style="cursor: pointer;">
                 <Icon icon="hugeicons:mailbox-01" width="25" height="25"></Icon>
               </div>
             </div>
@@ -33,7 +33,7 @@
               </div>
             </div>
             <div class="right">
-              <div class="count-icon">
+              <div class="count-icon" @click="route.name !== 'send' && $router.push({name: 'send'})" style="cursor: pointer;">
                 <Icon icon="cil:send" width="25" height="25"></Icon>
               </div>
             </div>
@@ -52,7 +52,7 @@
               </div>
             </div>
             <div class="right">
-              <div class="count-icon">
+              <div class="count-icon" @click="$router.push({name: 'setting'})" style="cursor: pointer;">
                 <Icon icon="lets-icons:e-mail" width="23" height="23"></Icon>
               </div>
             </div>
@@ -71,7 +71,7 @@
               </div>
             </div>
             <div class="right">
-              <div class="count-icon">
+              <div class="count-icon" @click="route.name !== 'user' && $router.push({name: 'user'})" style="cursor: pointer;">
                 <Icon icon="iconoir:user" width="25" height="25"></Icon>
               </div>
             </div>
@@ -94,12 +94,6 @@
             </span>
           </div>
           <div class="sender-pie">
-
-          </div>
-        </div>
-        <div class="picture-item">
-          <div class="title">{{ $t('userGrowth') }}</div>
-          <div class="increase-line">
 
           </div>
         </div>
@@ -288,7 +282,6 @@ function initPicture() {
   boxKey.value++
   setTimeout(() => {
     createSenderPie()
-    createIncreaseLine()
     createEmailColumnChart();
     createSendGauge();
   })
@@ -853,7 +846,7 @@ function createSendGauge() {
 
   .picture {
     display: grid;
-    grid-template-columns: 500px 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     @media (max-width: 1620px) {
       grid-template-columns: 1fr;
